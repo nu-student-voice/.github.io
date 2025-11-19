@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Page Not Found</title>
+  <script>
+    // GitHub PagesでSPAのルーティングを処理するためのリダイレクトスクリプト
+    // 404エラー時に、アクセスされたパスをハッシュとしてindex.htmlにリダイレクトする
+    var path = window.location.pathname;
+    var base = '/nihon-u-student-autonomy'; // リポジトリ名
+    
+    // パスがリポジトリ名で始まっていない場合は、ベースパスを追加
+    if (path.indexOf(base) === -1) {
+      path = base + path;
+    }
+
+    // index.htmlにリダイレクトし、パスをハッシュとして渡す
+    window.location.replace(base + "/#" + path + window.location.search);
+  </script>
+</head>
+<body>
+  <!-- リダイレクトが機能しない場合のフォールバック -->
+  <p>Redirecting...</p>
+  <a href="/nihon-u-student-autonomy/">Go to Home</a>
+</body>
+</html>
