@@ -15,6 +15,12 @@ import FinanceLearn from "./pages/FinanceLearn";
 import FAQ from "./pages/FAQ";
 import BusinessDivision from "./pages/BusinessDivision";
 
+const baseUrl = import.meta.env.BASE_URL;
+const routerBase =
+  baseUrl === "/" || baseUrl.startsWith(".")
+    ? undefined
+    : baseUrl.replace(/\/$/, "");
+
 function ScrollToTop() {
   const [location] = useLocation();
 
@@ -61,7 +67,7 @@ function App() {
       >
         <TooltipProvider>
           <Toaster />
-          <Router base="/nihon-u-student-autonomy">
+          <Router base={routerBase}>
             <AppRouter />
           </Router>
         </TooltipProvider>
