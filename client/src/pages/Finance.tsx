@@ -1,14 +1,26 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ChevronLeft } from "lucide-react";
-import { useEffect, useState } from "react";
-
-const basePath =
-  import.meta.env.BASE_URL === "/" ? "" : import.meta.env.BASE_URL.replace(/\/$/, "");
-const sankeyDiagramSrc = `${basePath}/sankey_diagram.html`;
+import { useEffect, useMemo, useState } from "react";
 
 export default function Finance() {
   const [iframeLoaded, setIframeLoaded] = useState(false);
+  const sankeyDiagramSrc = useMemo(() => {
+    const baseUrl = import.meta.env.BASE_URL ?? "/";
+    const normalizedBase =
+      baseUrl === "/" || baseUrl === "./"
+        ? ""
+        : baseUrl.startsWith("/")
+          ? baseUrl.replace(/\/$/, "")
+          : `/${baseUrl.replace(/\/$/, "")}`;
+
+    if (typeof window === "undefined") {
+      return `${normalizedBase}/sankey_diagram.html`;
+    }
+
+    const origin = window.location.origin;
+    return `${origin}${normalizedBase}/sankey_diagram.html`;
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-50 to-white">
