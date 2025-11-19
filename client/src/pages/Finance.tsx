@@ -3,6 +3,10 @@ import { Link } from "wouter";
 import { ChevronLeft } from "lucide-react";
 import { useEffect, useState } from "react";
 
+const basePath =
+  import.meta.env.BASE_URL === "/" ? "" : import.meta.env.BASE_URL.replace(/\/$/, "");
+const sankeyDiagramSrc = `${basePath}/sankey_diagram.html`;
+
 export default function Finance() {
   const [iframeLoaded, setIframeLoaded] = useState(false);
 
@@ -61,7 +65,7 @@ export default function Finance() {
         <section className="mb-8 md:mb-12 overflow-x-auto">
           <div className="bg-white rounded-lg shadow-lg p-2 md:p-4">
             <iframe 
-              src="/nihon-u-student-autonomy/sankey_diagram.html" 
+              src={sankeyDiagramSrc} 
               style={{width: '100%', height: 'auto', minHeight: '500px', border: 'none'}}
               onLoad={() => setIframeLoaded(true)}
             ></iframe>
