@@ -1,3 +1,4 @@
+import SiteNav from "@/components/SiteNav";
 import { Link } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -50,22 +51,7 @@ export default function FAQ() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <nav className="bg-blue-600 text-white py-4 sticky top-0 z-50">
-        <div className="max-w-6xl mx-auto px-4 flex justify-between items-center">
-          <Link href="/" className="text-xl font-bold hover:text-blue-100">
-            日大 学生自治復活
-          </Link>
-          <div className="hidden md:flex gap-6">
-            <Link href="/" className="hover:text-blue-100">ホーム</Link>
-            <Link href="/history" className="hover:text-blue-100">問題の経緯</Link>
-            <Link href="/issues" className="hover:text-blue-100">現状の課題</Link>
-            <Link href="/finance" className="hover:text-blue-100">財務情報</Link>
-            <Link href="/governance" className="hover:text-blue-100">ガバナンスとは</Link>
-            <Link href="/roadmap" className="hover:text-blue-100">ロードマップ</Link>
-            <Link href="/faq" className="text-blue-100 font-semibold">よくある質問</Link>
-          </div>
-        </div>
-      </nav>
+      <SiteNav />
 
       <main className="flex-1 max-w-4xl mx-auto px-4 py-12 w-full">
         <section className="mb-12">

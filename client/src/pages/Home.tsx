@@ -1,3 +1,4 @@
+import SiteNav from "@/components/SiteNav";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronRight, BookOpen, BarChart3, Lightbulb, Users } from "lucide-react";
@@ -7,27 +8,7 @@ import { APP_TITLE } from "@/const";
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-50 to-white">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <h1 className="text-lg md:text-xl font-bold text-slate-900">日大 学生自治復活</h1>
-          <div className="hidden md:flex gap-6 text-sm">
-            <Link href="/" className="text-slate-700 hover:text-slate-900 font-medium">ホーム</Link>
-            <Link href="/history" className="text-slate-700 hover:text-slate-900 font-medium">問題の経緯</Link>
-            <Link href="/issues" className="text-slate-700 hover:text-slate-900 font-medium">現状の課題</Link>
-            <Link href="/finance" className="text-slate-700 hover:text-slate-900 font-medium">財務情報</Link>
-            <Link href="/business-division" className="text-slate-700 hover:text-slate-900 font-medium">事業部問題</Link>
-            <Link href="/roadmap" className="text-slate-700 hover:text-slate-900 font-medium">ロードマップ</Link>
-          </div>
-          <div className="md:hidden flex gap-3 text-xs">
-            <Link href="/history" className="text-slate-700 hover:text-slate-900 font-medium">経緯</Link>
-            <Link href="/issues" className="text-slate-700 hover:text-slate-900 font-medium">課題</Link>
-            <Link href="/finance" className="text-slate-700 hover:text-slate-900 font-medium">財務</Link>
-            <Link href="/business-division" className="text-slate-700 hover:text-slate-900 font-medium">事業部</Link>
-            <Link href="/roadmap" className="text-slate-700 hover:text-slate-900 font-medium">行動</Link>
-          </div>
-        </div>
-      </nav>
+      <SiteNav />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12 md:py-20 px-4">

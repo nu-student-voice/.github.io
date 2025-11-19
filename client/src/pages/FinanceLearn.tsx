@@ -1,3 +1,4 @@
+import SiteNav from "@/components/SiteNav";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft } from "lucide-react";
@@ -7,7 +8,8 @@ export default function FinanceLearn() {
   const [, setLocation] = useLocation();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white flex flex-col">
+      <SiteNav />
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-12">
         <div className="container mx-auto px-4">
@@ -26,7 +28,7 @@ export default function FinanceLearn() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 flex-1 w-full">
         {/* Section 1: 大学会計の基本 */}
         <Card className="mb-8 border-l-4 border-l-blue-600">
           <CardHeader>

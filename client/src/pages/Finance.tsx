@@ -1,10 +1,13 @@
+import SiteNav from "@/components/SiteNav";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ChevronLeft } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
+import { useIsMobile } from "@/hooks/useMobile";
 
 export default function Finance() {
   const [iframeLoaded, setIframeLoaded] = useState(false);
+  const isMobile = useIsMobile();
   const sankeyDiagramSrc = useMemo(() => {
     const baseUrl = import.meta.env.BASE_URL ?? "/";
     const normalizedBase =
@@ -24,24 +27,7 @@ export default function Finance() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-50 to-white">
-      <nav className="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <h1 className="text-lg md:text-xl font-bold text-slate-900">日大 学生自治復活</h1>
-          <div className="hidden md:flex gap-6 text-sm">
-            <Link href="/" className="text-slate-700 hover:text-slate-900 font-medium">ホーム</Link>
-            <Link href="/history" className="text-slate-700 hover:text-slate-900 font-medium">問題の経緯</Link>
-            <Link href="/issues" className="text-slate-700 hover:text-slate-900 font-medium">現状の課題</Link>
-            <Link href="/finance" className="text-slate-700 hover:text-slate-900 font-medium">財務情報</Link>
-            <Link href="/roadmap" className="text-slate-700 hover:text-slate-900 font-medium">ロードマップ</Link>
-          </div>
-          <div className="md:hidden flex gap-3 text-xs">
-            <Link href="/history" className="text-slate-700 hover:text-slate-900 font-medium">経緯</Link>
-            <Link href="/issues" className="text-slate-700 hover:text-slate-900 font-medium">課題</Link>
-            <Link href="/finance" className="text-slate-700 hover:text-slate-900 font-medium">財務</Link>
-            <Link href="/roadmap" className="text-slate-700 hover:text-slate-900 font-medium">行動</Link>
-          </div>
-        </div>
-      </nav>
+      <SiteNav />
 
       <main className="flex-1 max-w-6xl mx-auto px-4 py-6 md:py-12 w-full">
         <Link href="/" className="flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-6 md:mb-8">
@@ -74,13 +60,26 @@ export default function Finance() {
           </Card>
         </section>
 
-        <section className="mb-8 md:mb-12 overflow-x-auto">
-          <div className="bg-white rounded-lg shadow-lg p-2 md:p-4">
-            <iframe 
-              src={sankeyDiagramSrc} 
-              style={{width: '100%', height: 'auto', minHeight: '500px', border: 'none'}}
-              onLoad={() => setIframeLoaded(true)}
-            ></iframe>
+        <section className="mb-8 md:mb-12">
+          <div className="bg-white rounded-2xl shadow-lg p-3 md:p-4 border border-slate-100">
+            <div
+              className="relative w-full rounded-xl overflow-hidden bg-slate-50"
+              style={{ minHeight: isMobile ? 520 : 820 }}
+            >
+              {!iframeLoaded && (
+                <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-slate-600 bg-white/70 backdrop-blur-sm">
+                  <div className="h-10 w-10 border-4 border-blue-100 border-t-blue-500 rounded-full animate-spin" />
+                  <p className="text-sm font-medium">サンキー図を読み込み中...</p>
+                </div>
+              )}
+              <iframe
+                title="日本大学資金フロー"
+                src={sankeyDiagramSrc}
+                loading="lazy"
+                className="absolute inset-0 w-full h-full border-0"
+                onLoad={() => setIframeLoaded(true)}
+              />
+            </div>
           </div>
         </section>
 

@@ -1,3 +1,4 @@
+import SiteNav from "@/components/SiteNav";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ChevronLeft, BookOpen, Users, Shield, TrendingUp } from "lucide-react";
@@ -5,19 +6,7 @@ import { ChevronLeft, BookOpen, Users, Shield, TrendingUp } from "lucide-react";
 export default function Governance() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-50 to-white">
-      <nav className="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <h1 className="text-xl font-bold text-slate-900">日大 学生自治復活</h1>
-          <div className="flex gap-6 text-sm">
-            <Link href="/" className="text-slate-700 hover:text-slate-900 font-medium">ホーム</Link>
-            <Link href="/governance" className="text-slate-700 hover:text-slate-900 font-medium">ガバナンスとは</Link>
-            <Link href="/history" className="text-slate-700 hover:text-slate-900 font-medium">不正事案の詳細</Link>
-            <Link href="/issues" className="text-slate-700 hover:text-slate-900 font-medium">ガバナンス欠陥</Link>
-            <Link href="/finance" className="text-slate-700 hover:text-slate-900 font-medium">財務情報</Link>
-            <Link href="/roadmap" className="text-slate-700 hover:text-slate-900 font-medium">改革と行動</Link>
-          </div>
-        </div>
-      </nav>
+      <SiteNav />
 
       <main className="flex-1 max-w-4xl mx-auto px-4 py-12 w-full">
         <Link href="/" className="flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-8">

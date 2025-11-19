@@ -1,86 +1,112 @@
+import SiteNav from "@/components/SiteNav";
 import { Link } from "wouter";
 
 export default function BusinessDivision() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <Link href="/" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
-        &lt; ホームに戻る
-      </Link>
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-50 to-white">
+      <SiteNav />
+      <main className="container mx-auto px-4 py-10 flex-1 w-full">
+        <Link href="/" className="text-blue-600 hover:text-blue-800 mb-6 inline-flex items-center gap-2">
+          &lt; ホームに戻る
+        </Link>
 
-      <h1 className="text-4xl font-bold text-gray-800 mb-4">
-        株式会社 日本大学事業部
-      </h1>
-      <p className="text-xl text-gray-600 mb-8">
-        大学のガバナンス不全の象徴：その役割と不正事案
-      </p>
+        <header className="mb-10">
+          <h1 className="text-4xl font-bold text-gray-900 mb-3">株式会社 日本大学事業部</h1>
+          <p className="text-xl text-gray-600">
+            ガバナンス不全を象徴する関連会社と、不正に揺れた資金の流れ
+          </p>
+        </header>
 
-      <div className="bg-white shadow-lg rounded-lg p-6 mb-8">
-        <h2 className="text-2xl font-semibold text-gray-700 mb-4 border-b pb-2">
-          事業部の概要と本来の役割
-        </h2>
-        <p className="mb-4">
-          株式会社日本大学事業部は、学校法人日本大学が**全額出資**して設立した関連会社です。
-          その本来の目的は、大学の**調達業務**（備品、物品、役務の提供など）を一元的に担い、効率化を図ること、そして事業で得た収益を大学に寄付することで、大学の財政を支援することでした。
-        </p>
-        <ul className="list-disc list-inside ml-4 text-gray-600">
-          <li>
-            **設立目的:** 大学の調達業務の効率化、収益の大学への寄付
-          </li>
-          <li>
-            **主な業務:** 部科校の調達業務、保険代理業務、物品販売など
-          </li>
-        </ul>
-      </div>
+        <section className="bg-white shadow-xl rounded-2xl p-6 md:p-8 mb-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b pb-2">事業部の概要と役割</h2>
+          <p className="mb-4 text-gray-700 leading-relaxed">
+            株式会社日本大学事業部は、学校法人日本大学が<strong>全額出資</strong>して設立した関連会社です。大学の
+            <strong>調達業務</strong>（備品・物品・役務の提供など）を一元的に担い、業務の効率化と収益による大学財政支援を
+            目的としていました。
+          </p>
+          <ul className="list-disc list-inside ml-4 text-gray-700 space-y-2">
+            <li>
+              <strong>設立目的:</strong> 調達の効率化と大学への安定した還元。
+            </li>
+            <li>
+              <strong>主な業務:</strong> 部科校の調達代行、保険代理、物品販売など。
+            </li>
+          </ul>
+        </section>
 
-      <div className="bg-red-50 shadow-lg rounded-lg p-6 mb-8 border-l-4 border-red-500">
-        <h2 className="text-2xl font-semibold text-red-700 mb-4 border-b border-red-200 pb-2">
-          不正事案における役割
-        </h2>
-        <p className="mb-4 text-red-800">
-          この事業部は、元理事長・田中英壽氏と元理事・井ノ口忠男氏による**巨額の背任事件**において、不正な資金の流れの中心的な舞台となりました。
-        </p>
-        <ul className="list-disc list-inside ml-4 text-red-800">
-          <li>
-            **不透明な取引:** 付属病院の建て替え工事や医療機器の調達など、巨額の取引において、事業部を介することで**不必要な中間業者**が入り込み、大学に損害を与える取引が行われました。
-          </li>
-          <li>
-            **強圧的支配:** 元理事の井ノ口氏が事業部の取締役を務め、その**強大な権限**を利用して、大学の調達業務を私物化し、業者選定に介入するなど、**ガバナンスの欠如**を象徴する存在となりました。
-          </li>
-          <li>
-            **資金の私的流用:** 事業部を介した取引から得られた資金の一部が、元理事長や元理事側に**不正に還流**していたことが、第三者委員会の調査で明らかになりました。
-          </li>
-        </ul>
-      </div>
+        <section className="bg-red-50 shadow-xl rounded-2xl p-6 md:p-8 mb-8 border-l-4 border-red-500">
+          <h2 className="text-2xl font-semibold text-red-700 mb-4 border-b border-red-200 pb-2">
+            不正事案における役割
+          </h2>
+          <p className="mb-4 text-red-900 leading-relaxed">
+            事業部は、元理事長・田中英壽氏と元理事・井ノ口忠男氏による<strong>巨額の背任事件</strong>で、資金の中継地点として
+            機能しました。結果として、学生に投資されるべき資金が失われました。
+          </p>
+          <ul className="list-disc list-inside ml-4 text-gray-800 space-y-2">
+            <li>
+              <strong>不正契約:</strong> 競争入札を避け、特定企業へ優先的に発注。
+            </li>
+            <li>
+              <strong>見返り:</strong> 大学幹部が現金や高級品などの利益供与を受け取っていた。
+            </li>
+            <li>
+              <strong>学生への影響:</strong> 教育環境整備や奨学金に回るはずの資金が流出。
+            </li>
+          </ul>
+        </section>
 
-      <div className="bg-white shadow-lg rounded-lg p-6 mb-8">
-        <h2 className="text-2xl font-semibold text-gray-700 mb-4 border-b pb-2">
-          学生自治の視点から
-        </h2>
-        <p className="mb-4">
-          事業部による不正は、学生が納めた**学費や大学の資産**が、本来の教育・研究目的ではなく、一部の役員による私的な利益のために使われていたことを意味します。
-        </p>
-        <ul className="list-disc list-inside ml-4 text-gray-600">
-          <li>
-            **失われた資金:** 不正に流出した資金は、本来であれば**奨学金の拡充**や**教育施設の改善**など、学生の利益のために使われるべきものでした。
-          </li>
-          <li>
-            **透明性の欠如:** 事業部の取引は、大学の外部からはチェックが及ばない**不透明な構造**になっており、学生が大学運営を監視する仕組みの重要性を浮き彫りにしました。
-          </li>
-        </ul>
-      </div>
+        <section className="bg-white shadow-xl rounded-2xl p-6 md:p-8 mb-8">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b pb-2">
+            不正の具体例（第三者委員会報告書より）
+          </h2>
+          <ul className="space-y-3 text-gray-700">
+            <li>✅ <strong>不透明な外部業者への発注</strong>：理事長と関係の深い企業へ随意契約。</li>
+            <li>✅ <strong>見返りの受領</strong>：大学関係者が企業から多額の現金や高級品を入手。</li>
+            <li>✅ <strong>不自然な資金移動</strong>：事業部経由の資金が大学関連団体や個人口座へ。</li>
+          </ul>
+        </section>
 
-      <div className="bg-blue-50 shadow-lg rounded-lg p-6">
-        <h2 className="text-2xl font-semibold text-blue-700 mb-4 border-b border-blue-200 pb-2">
-          現在の状況
-        </h2>
-        <p className="mb-4">
-          一連の不正事案を受け、株式会社日本大学事業部は**解散**しました。
-          しかし、事業部が象徴していた**大学のガバナンス不全**という根本的な問題は、学生が主体的に大学運営に関わる仕組みがなければ、再び起こりかねません。
-        </p>
-        <p className="font-bold text-blue-800">
-          学生自治の復活は、二度とこのような不正を許さないための、最も重要な防波堤となります。
-        </p>
-      </div>
+        <section className="bg-blue-50 shadow-xl rounded-2xl p-6 md:p-8 mb-8 border-l-4 border-blue-500">
+          <h2 className="text-2xl font-semibold text-blue-800 mb-4 border-b border-blue-200 pb-2">
+            なぜ学生に関係があるのか？
+          </h2>
+          <p className="mb-4 text-blue-900 leading-relaxed">
+            不正によって失われた資金は、学生生活の質向上に使われるべきものでした。
+          </p>
+          <ul className="list-disc list-inside ml-4 text-gray-700 space-y-2">
+            <li>補助金・奨学金の原資が減少。</li>
+            <li>キャンパス整備や学生支援が後回しに。</li>
+            <li>大学の信用低下が学生の就職・進学にも影響。</li>
+          </ul>
+        </section>
+
+        <section className="bg-green-50 shadow-xl rounded-2xl p-6 md:p-8 mb-8 border-l-4 border-green-500">
+          <h2 className="text-2xl font-semibold text-green-700 mb-4 border-b border-green-200 pb-2">
+            学生が今すぐ取れるアクション
+          </h2>
+          <ol className="list-decimal list-inside ml-4 text-gray-700 space-y-3">
+            <li>
+              <strong>情報共有:</strong> 事業部問題を学生間で共有し、認知を広げる。
+            </li>
+            <li>
+              <strong>透明性の要求:</strong> 大学に財務情報と関連会社の取引情報を開示させる。
+            </li>
+            <li>
+              <strong>自治組織との連携:</strong> 学生自治会や同窓会と協力し、要望書を提出する。
+            </li>
+          </ol>
+        </section>
+
+        <section className="bg-gray-100 shadow-xl rounded-2xl p-6 md:p-8 border-l-4 border-gray-500">
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4 border-b border-gray-300 pb-2">
+            まとめ：事業部問題はガバナンスの縮図
+          </h2>
+          <p className="text-gray-700 leading-relaxed">
+            日本大学事業部は、大学全体のガバナンス不全を象徴する存在です。学生自治を再建するためには、こうした不透明な資金の
+            流れを正し、意思決定に学生の視点を取り戻すことが不可欠です。
+          </p>
+        </section>
+      </main>
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import SiteNav from "@/components/SiteNav";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ChevronLeft } from "lucide-react";
@@ -5,18 +6,7 @@ import { ChevronLeft } from "lucide-react";
 export default function Roadmap() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-50 to-white">
-      <nav className="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <h1 className="text-xl font-bold text-slate-900">日大 学生自治復活</h1>
-          <div className="flex gap-6 text-sm">
-            <Link href="/" className="text-slate-700 hover:text-slate-900 font-medium">ホーム</Link>
-            <Link href="/history" className="text-slate-700 hover:text-slate-900 font-medium">問題の経緯</Link>
-            <Link href="/issues" className="text-slate-700 hover:text-slate-900 font-medium">現状の課題</Link>
-            <Link href="/finance" className="text-slate-700 hover:text-slate-900 font-medium">財務情報</Link>
-            <Link href="/roadmap" className="text-slate-700 hover:text-slate-900 font-medium">ロードマップ</Link>
-          </div>
-        </div>
-      </nav>
+      <SiteNav />
 
       <main className="flex-1 max-w-4xl mx-auto px-4 py-12 w-full">
         <Link href="/" className="flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-8">
