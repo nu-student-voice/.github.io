@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "patch-package",
     "dev": "vite --host",
-    "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist && cp 404.html dist/public/404.html && cp sitemap.xml dist/public/sitemap.xml && cp robots.txt dist/public/robots.txt",
+    "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist && node scripts/generate-404.mjs && cp sitemap.xml dist/public/sitemap.xml && cp robots.txt dist/public/robots.txt",
     "start": "NODE_ENV=production node dist/index.js",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",

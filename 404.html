@@ -4,23 +4,33 @@
   <meta charset="utf-8">
   <title>Page Not Found</title>
   <script>
-    // GitHub PagesでSPAのルーティングを処理するためのリダイレクトスクリプト
-    // 404エラー時に、アクセスされたパスをハッシュとしてindex.htmlにリダイレクトする
-    var path = window.location.pathname;
-    var base = '/nihon-u-student-autonomy'; // リポジトリ名
-    
-    // パスがリポジトリ名で始まっていない場合は、ベースパスを追加
-    if (path.indexOf(base) === -1) {
-      path = base + path;
-    }
+    (function () {
+      var storageKey = "__SPA_REDIRECT_PATH__";
+      var basePath = "__BASE_PATH__";
+      var normalizedBase =
+        !basePath || basePath === "/" ? "" : basePath.replace(/\/$/, "");
+      var path = window.location.pathname;
+      var search = window.location.search || "";
+      var hash = window.location.hash || "";
 
-    // index.htmlにリダイレクトし、パスをハッシュとして渡す
-    window.location.replace(base + "/#" + path + window.location.search);
+      try {
+        sessionStorage.setItem(storageKey, path + search + hash);
+      } catch (error) {
+        console.warn("Unable to persist redirect path", error);
+      }
+
+      var target = normalizedBase || "/";
+      if (target !== "/" && !target.endsWith("/")) {
+        target += "/";
+      }
+
+      window.location.replace(target);
+    })();
   </script>
 </head>
 <body>
   <!-- リダイレクトが機能しない場合のフォールバック -->
   <p>Redirecting...</p>
-  <a href="/nihon-u-student-autonomy/">Go to Home</a>
+  <a href="__HOME_HREF__">Go to Home</a>
 </body>
 </html>

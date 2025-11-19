@@ -17,6 +17,37 @@
   </head>
 
   <body>
+    <script>
+      (function () {
+        var storageKey = "__SPA_REDIRECT_PATH__";
+        var redirectPath = null;
+
+        try {
+          redirectPath = sessionStorage.getItem(storageKey);
+        } catch (error) {
+          console.warn("Unable to restore redirect path", error);
+        }
+
+        if (!redirectPath) {
+          return;
+        }
+
+        try {
+          sessionStorage.removeItem(storageKey);
+        } catch (error) {
+          console.warn("Unable to clear redirect flag", error);
+        }
+
+        var current =
+          window.location.pathname +
+          window.location.search +
+          window.location.hash;
+
+        if (redirectPath !== current) {
+          window.history.replaceState(null, "", redirectPath);
+        }
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <script
