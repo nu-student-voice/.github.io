@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 import { AlertTriangle, ChevronLeft, FileText, Gavel, Users } from "lucide-react";
+import { GlossaryTerm } from "@/components/GlossaryTerm";
 
 type TimelineItem = {
   date: string;
@@ -120,7 +121,7 @@ export default function Council() {
           <p className="text-sm uppercase tracking-wide text-slate-500">日本大学 評議員会ガイド</p>
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">評議員会の役割と最新動向を一望</h1>
           <p className="text-base sm:text-lg text-slate-600">
-            日本大学情報公開ページ「評議会」（
+            日本大学情報公開ページ「<GlossaryTerm id="hyougikai">評議員会</GlossaryTerm>」（
             <a
               href="https://www.nihon-u.ac.jp/disclosure/minutes/board_trustees/"
               className="text-blue-700 underline hover:text-blue-900"

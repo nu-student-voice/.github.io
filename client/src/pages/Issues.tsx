@@ -2,6 +2,7 @@ import SiteNav from "@/components/SiteNav";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ChevronLeft, AlertTriangle, CheckCircle2, XCircle } from "lucide-react";
+import { GlossaryTerm } from "@/components/GlossaryTerm";
 
 export default function Issues() {
   return (
@@ -55,7 +56,9 @@ export default function Issues() {
 
         {/* Issue 1: Excessive Authority Concentration */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-slate-900 mb-6">欠陥1：理事長権限の過度な集中</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-6">
+            欠陥1：理事長権限の過度な集中
+          </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <Card className="border-l-4 border-l-green-500">
@@ -67,7 +70,7 @@ export default function Issues() {
               </CardHeader>
               <CardContent className="text-slate-700 space-y-3">
                 <div className="space-y-2 text-sm">
-                  <p>✓ 理事会が最高意思決定機関</p>
+                  <p>✓ <GlossaryTerm id="rijikai">理事会</GlossaryTerm>が最高意思決定機関</p>
                   <p>✓ 理事長の権限は制限される</p>
                   <p>✓ 重要決定は理事会の承認が必要</p>
                   <p>✓ 定期的な評価と交代</p>

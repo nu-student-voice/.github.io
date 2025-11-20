@@ -12,6 +12,7 @@ const navSections = [
       { label: "ガバナンスとは", href: "/governance" },
       { label: "評議員会を知る", href: "/council" },
       { label: "事業部の課題", href: "/business-division" },
+      { label: "用語集", href: "/glossary" },
     ],
   },
   {

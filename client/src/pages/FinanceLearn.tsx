@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft } from "lucide-react";
 import { useLocation } from "wouter";
+import { GlossaryTerm } from "@/components/GlossaryTerm";
 
 export default function FinanceLearn() {
   const [, setLocation] = useLocation();
@@ -101,7 +102,9 @@ export default function FinanceLearn() {
 
               {/* Concept 1: 基本金 */}
               <div className="border-2 border-orange-300 p-4 rounded-lg">
-                <h4 className="font-bold text-lg text-orange-900 mb-2">①基本金組入（きほんきんくみいれ）</h4>
+                <h4 className="font-bold text-lg text-orange-900 mb-2">
+                  ①<GlossaryTerm id="kihonkin">基本金組入</GlossaryTerm>（きほんきんくみいれ）
+                </h4>
                 <p className="text-gray-700 mb-3">
                   <span className="font-bold">基本金とは：</span> 大学が永続的に教育・研究を行うために必要な資産（土地、建物、設備など）
                 </p>
@@ -120,7 +123,9 @@ export default function FinanceLearn() {
 
               {/* Concept 2: 減価償却 */}
               <div className="border-2 border-yellow-300 p-4 rounded-lg">
-                <h4 className="font-bold text-lg text-yellow-900 mb-2">②減価償却費（げんかしょうきゃくひ）</h4>
+              <h4 className="font-bold text-lg text-yellow-900 mb-2">
+                ②<GlossaryTerm id="genkashoukyaku">減価償却費</GlossaryTerm>（げんかしょうきゃくひ）
+              </h4>
                 <p className="text-gray-700 mb-3">
                   <span className="font-bold">減価償却とは：</span> 建物や設備などの固定資産は、時間とともに価値が減少する。その減少分を毎年「費用」として計上する仕組み
                 </p>
@@ -139,7 +144,9 @@ export default function FinanceLearn() {
 
               {/* Concept 3: 内部留保 */}
               <div className="border-2 border-green-300 p-4 rounded-lg">
-                <h4 className="font-bold text-lg text-green-900 mb-2">③内部留保（ないぶりゅうほ）</h4>
+              <h4 className="font-bold text-lg text-green-900 mb-2">
+                ③<GlossaryTerm id="naiburyuho">内部留保</GlossaryTerm>（ないぶりゅうほ）
+              </h4>
                 <p className="text-gray-700 mb-3">
                   <span className="font-bold">内部留保とは：</span> 大学が毎年の運営で生じた余剰金を蓄積したもの。将来の施設改修や設備更新のための「貯蓄」
                 </p>

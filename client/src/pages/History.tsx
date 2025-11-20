@@ -2,6 +2,7 @@ import SiteNav from "@/components/SiteNav";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "wouter";
 import { ChevronLeft, AlertCircle, TrendingDown, DollarSign } from "lucide-react";
+import { GlossaryTerm } from "@/components/GlossaryTerm";
 
 export default function History() {
   return (
@@ -16,7 +17,11 @@ export default function History() {
         </Link>
 
         <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">不正事案の詳細</h1>
-        <p className="text-base sm:text-lg text-slate-600 mb-4">日本大学で何が起きたのか、具体的な事件を詳しく解説します</p>
+        <p className="text-base sm:text-lg text-slate-600 mb-4">
+          日本大学で何が起きたのか、具体的な事件を詳しく解説します。
+          本文中の <GlossaryTerm id="kifukoui">寄附行為</GlossaryTerm> や <GlossaryTerm id="hyougikai">評議員会</GlossaryTerm> などの用語は、
+          用語集から概要を確認できます。
+        </p>
         
         {/* Source Reference */}
         <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-8">
