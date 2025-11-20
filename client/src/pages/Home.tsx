@@ -13,10 +13,12 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12 md:py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl leading-tight md:text-5xl md:leading-tight font-bold mb-4 md:mb-6">
+          <h2 className="text-2xl leading-tight sm:text-4xl md:text-5xl sm:leading-tight md:leading-tight font-bold mb-4 md:mb-6">
             日大の「自治」を取り戻そう
           </h2>
-          <p className="text-lg md:text-xl text-blue-100 mb-6 md:mb-8">学生が主体的に大学運営に関わることの重要性</p>
+          <p className="text-base sm:text-lg md:text-xl text-blue-100 mb-6 md:mb-8">
+            学生が主体的に大学運営に関わることの重要性
+          </p>
           <p className="text-base md:text-lg text-blue-50 max-w-2xl mx-auto leading-relaxed">
             大学は、学生の学習と成長の場です。しかし、その大学がどのように運営されているか、学生の声が本当に反映されているか、考えたことはありますか？
           </p>
