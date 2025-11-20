@@ -10,26 +10,27 @@ export default function FinanceLearn() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white flex flex-col">
       <SiteNav />
-      {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-10 sm:py-12">
-        <div className="container mx-auto px-4">
-          <button
-            onClick={() => setLocation("/finance")}
-            className="flex items-center gap-2 text-blue-100 hover:text-white mb-6 transition-colors"
-          >
-            <ArrowLeft size={20} />
-            財務情報に戻る
-          </button>
-          <h1 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">財務について学ぶ</h1>
-          <p className="text-blue-100 text-base sm:text-lg">
-            大学会計の基礎知識と日本大学の財務状況を理解しよう
-          </p>
+      <main id="main-content" className="flex-1">
+        {/* Header */}
+        <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-10 sm:py-12">
+          <div className="container mx-auto px-4">
+            <button
+              onClick={() => setLocation("/finance")}
+              className="flex items-center gap-2 text-blue-100 hover:text-white mb-6 transition-colors"
+            >
+              <ArrowLeft size={20} />
+              財務情報に戻る
+            </button>
+            <h1 className="text-3xl sm:text-4xl font-bold mb-3 sm:mb-4">財務について学ぶ</h1>
+            <p className="text-blue-100 text-base sm:text-lg">
+              大学会計の基礎知識と日本大学の財務状況を理解しよう
+            </p>
+          </div>
         </div>
-      </div>
 
-      {/* Main Content */}
-      <div className="container mx-auto px-4 py-10 sm:py-12 flex-1 w-full">
-        {/* Section 1: 大学会計の基本 */}
+        {/* Main Content */}
+        <div className="container mx-auto px-4 py-10 sm:py-12 w-full">
+          {/* Section 1: 大学会計の基本 */}
         <Card className="mb-8 border-l-4 border-l-blue-600">
           <CardHeader>
             <CardTitle className="text-2xl">1. 大学会計の基本的な仕組み</CardTitle>

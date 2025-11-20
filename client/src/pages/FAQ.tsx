@@ -53,7 +53,7 @@ export default function FAQ() {
     <div className="min-h-screen flex flex-col bg-white">
       <SiteNav />
 
-      <main className="flex-1 max-w-4xl mx-auto px-4 py-10 sm:py-12 w-full">
+      <main id="main-content" className="flex-1 max-w-4xl mx-auto px-4 py-10 sm:py-12 w-full">
         <section className="mb-12">
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">よくある質問</h1>
           <p className="text-base sm:text-lg text-slate-700">

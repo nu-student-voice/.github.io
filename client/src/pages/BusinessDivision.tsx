@@ -5,7 +5,7 @@ export default function BusinessDivision() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-50 to-white">
       <SiteNav />
-      <main className="container mx-auto px-4 py-10 flex-1 w-full">
+      <main id="main-content" className="container mx-auto px-4 py-10 flex-1 w-full">
         <Link href="/" className="text-blue-600 hover:text-blue-800 mb-6 inline-flex items-center gap-2">
           &lt; ホームに戻る
         </Link>

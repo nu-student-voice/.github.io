@@ -26,7 +26,94 @@ export default function Home() {
       </section>
 
       {/* Main Content */}
-      <main className="flex-1 max-w-6xl mx-auto px-4 py-8 md:py-16 w-full">
+      <main id="main-content" className="flex-1 max-w-6xl mx-auto px-4 py-8 md:py-16 w-full space-y-10">
+        <section className="max-w-3xl mx-auto bg-white border border-blue-100 rounded-lg p-4 md:p-5 shadow-sm">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="text-xs uppercase tracking-wide text-blue-700 font-semibold">更新情報</p>
+              <p className="text-sm text-slate-700">
+                公式調査報告書（2022/3/31）と評議会議事録（2022-2024・情報公開ページ）を反映。
+              </p>
+            </div>
+            <div className="text-xs text-slate-500">
+              情報源：
+              <a
+                href="https://www.nihon-u.ac.jp/uploads/files/20220331152658.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline ml-1"
+              >
+                調査報告書
+              </a>
+              ・
+              <a
+                href="https://www.nihon-u.ac.jp/disclosure/minutes/board_trustees/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline ml-1"
+              >
+                評議会議事録
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section className="grid gap-4 md:grid-cols-3">
+          <Card className="border border-slate-200 h-full">
+            <CardHeader>
+              <CardTitle className="text-lg">はじめての方へ</CardTitle>
+              <CardDescription>全体像を5分で</CardDescription>
+            </CardHeader>
+            <CardContent className="text-sm text-slate-700 space-y-3">
+              <p>まずは不正の経緯とガバナンス欠陥を一気に把握。</p>
+              <Link href="/history" className="text-blue-600 font-semibold hover:text-blue-800">
+                不正事案を見る →
+              </Link>
+            </CardContent>
+          </Card>
+
+          <Card className="border border-slate-200 h-full">
+            <CardHeader>
+              <CardTitle className="text-lg">今の課題と構造</CardTitle>
+              <CardDescription>何が壊れているか</CardDescription>
+            </CardHeader>
+            <CardContent className="text-sm text-slate-700 space-y-3">
+              <p>ガバナンス欠陥・評議員会の動き・事業部問題を整理。</p>
+              <div className="flex flex-col gap-1">
+                <Link href="/issues" className="text-blue-600 font-semibold hover:text-blue-800">
+                  ガバナンス欠陥 →
+                </Link>
+                <Link href="/council" className="text-blue-600 font-semibold hover:text-blue-800">
+                  評議員会の決定を追う →
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="border border-slate-200 h-full">
+            <CardHeader>
+              <CardTitle className="text-lg">行動の道筋</CardTitle>
+              <CardDescription>参加・提案・共有</CardDescription>
+            </CardHeader>
+            <CardContent className="text-sm text-slate-700 space-y-3">
+              <p>自治復活のロードマップと意見提出の導線を集約。</p>
+              <div className="flex flex-col gap-1">
+                <Link href="/roadmap" className="text-blue-600 font-semibold hover:text-blue-800">
+                  ロードマップ →
+                </Link>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSe9JGWRppBHczwj1ruRSvRkaLetJgvtQWbT7ywmvodQtZHweA/viewform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 font-semibold hover:text-blue-800"
+                >
+                  意見・質問を送る →
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
         {/* Introduction Section */}
         <section className="mb-12 md:mb-20">
           <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6 md:mb-8">日本大学で何が起きたのか</h3>

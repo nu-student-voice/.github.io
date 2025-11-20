@@ -8,7 +8,7 @@ export default function Issues() {
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-50 to-white">
       <SiteNav />
 
-      <main className="flex-1 max-w-4xl mx-auto px-4 py-10 sm:py-12 w-full">
+      <main id="main-content" className="flex-1 max-w-4xl mx-auto px-4 py-10 sm:py-12 w-full">
         <Link href="/" className="flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-8">
           <ChevronLeft className="w-4 h-4" />
           ホームに戻る

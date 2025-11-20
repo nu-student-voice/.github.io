@@ -57,7 +57,14 @@ export default function SiteNav() {
   const closeMobile = () => setMobileOpen(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
+    <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:border focus:border-slate-300 focus:rounded-lg focus:shadow"
+      >
+        メインコンテンツへスキップ
+      </a>
+      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
           <NavLink
             href="/"
@@ -150,6 +157,7 @@ export default function SiteNav() {
           </div>
         </div>
       )}
-    </nav>
+      </nav>
+    </>
   );
 }
