@@ -8,14 +8,14 @@ export default function Issues() {
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-50 to-white">
       <SiteNav />
 
-      <main className="flex-1 max-w-4xl mx-auto px-4 py-12 w-full">
+      <main className="flex-1 max-w-4xl mx-auto px-4 py-10 sm:py-12 w-full">
         <Link href="/" className="flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-8">
           <ChevronLeft className="w-4 h-4" />
           ホームに戻る
         </Link>
 
-        <h1 className="text-4xl font-bold text-slate-900 mb-4">ガバナンス欠陥の分析</h1>
-        <p className="text-lg text-slate-600 mb-4">なぜ不正事件が起きたのか？経営学的な視点から分析します</p>
+        <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">ガバナンス欠陥の分析</h1>
+        <p className="text-base sm:text-lg text-slate-600 mb-4">なぜ不正事件が起きたのか？経営学的な視点から分析します</p>
         
         {/* Source Reference */}
         <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-8">

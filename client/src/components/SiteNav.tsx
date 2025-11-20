@@ -116,7 +116,7 @@ export default function SiteNav() {
 
       {mobileOpen && (
         <div className="lg:hidden border-t border-slate-200 bg-white">
-          <div className="max-w-6xl mx-auto px-4 py-4 space-y-4 text-sm text-slate-700">
+          <div className="max-w-6xl mx-auto px-4 py-4 space-y-4 text-base text-slate-700">
             {quickLinks.map((link) => (
               <NavLink
                 key={link.href}

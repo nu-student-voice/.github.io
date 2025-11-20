@@ -11,7 +11,7 @@ export default function BusinessDivision() {
         </Link>
 
         <header className="mb-10">
-          <h1 className="text-4xl font-bold text-gray-900 mb-3">株式会社 日本大学事業部</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">株式会社 日本大学事業部</h1>
           <p className="text-xl text-gray-600">
             ガバナンス不全を象徴する関連会社と、不正に揺れた資金の流れ
           </p>

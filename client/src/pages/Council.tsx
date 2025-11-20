@@ -107,7 +107,7 @@ export default function Council() {
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-slate-50 to-white">
       <SiteNav />
 
-      <main className="flex-1 max-w-5xl mx-auto px-4 py-12 w-full space-y-12">
+      <main className="flex-1 max-w-5xl mx-auto px-4 py-10 sm:py-12 w-full space-y-10 sm:space-y-12">
         <Link href="/" className="flex items-center gap-2 text-blue-600 hover:text-blue-800">
           <ChevronLeft className="w-4 h-4" />
           ホームに戻る
@@ -115,8 +115,8 @@ export default function Council() {
 
         <header className="space-y-4">
           <p className="text-sm uppercase tracking-wide text-slate-500">日本大学 評議員会ガイド</p>
-          <h1 className="text-4xl font-bold text-slate-900">評議員会の役割と最新動向を一望</h1>
-          <p className="text-lg text-slate-600">
+          <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">評議員会の役割と最新動向を一望</h1>
+          <p className="text-base sm:text-lg text-slate-600">
             日本大学情報公開ページ「評議会」（
             <a
               href="https://www.nihon-u.ac.jp/disclosure/minutes/board_trustees/"
