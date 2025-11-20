@@ -329,6 +329,35 @@ export default function History() {
                     「事業部は日大の100%子会社であることや、本件一連の不正行為が日大の発注する取引について行われていたこと等に照らせば、井ノ口氏、田中氏らに供与された現金・利益等の原資はもともと日大に帰属していたものということができ、『事業部の私物化』は、<strong>日大を『食い物』にする行為</strong>でもある。」
                   </blockquote>
                 </div>
+
+                <div className="border-t border-slate-200 pt-3 space-y-2">
+                  <h4 className="font-semibold text-slate-900 mb-1">5. 調査で判明したその他の不正（2024年報告書より）</h4>
+                  <ul className="text-sm space-y-2 ml-4 list-disc">
+                    <li>
+                      <strong>敷地内薬局の利権：</strong>
+                      病院敷地内の薬局運営権を井ノ口氏が独断で切替え、リベートを受領。
+                    </li>
+                    <li>
+                      <strong>特別室料の免除（VIP待遇）：</strong>
+                      田中元理事長らが差額ベッド代や医療費を不当に免除される扱いが常態化。
+                    </li>
+                    <li>
+                      <strong>電子カルテ等の水増し請求：</strong>
+                      システム導入費に実態のない作業費を上乗せし病院側に負担させていた。
+                    </li>
+                    <li>
+                      <strong>広報業務の不透明契約：</strong>
+                      田中氏の妻と親密な会社へ入札なしで委託し、契約条件も外部精査なし。
+                    </li>
+                    <li>
+                      <strong>タクシー券の私的流用：</strong>
+                      業務無関係のタクシーチケット利用が常態化し、管理簿も整備されていなかった。
+                    </li>
+                  </ul>
+                  <p className="text-xs text-slate-500">
+                    ※ 第三者委員会報告書（2024年4月26日付 20240426144117.pdf 等）で整理された追加不正例の要約
+                  </p>
+                </div>
               </div>
             </CardContent>
           </Card>
