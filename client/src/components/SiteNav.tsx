@@ -10,6 +10,7 @@ const navSections = [
       { label: "問題の経緯", href: "/history" },
       { label: "現状の課題", href: "/issues" },
       { label: "ガバナンスとは", href: "/governance" },
+      { label: "評議員会を知る", href: "/council" },
       { label: "事業部の課題", href: "/business-division" },
     ],
   },

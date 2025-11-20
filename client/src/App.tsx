@@ -14,6 +14,7 @@ import Roadmap from "./pages/Roadmap";
 import FinanceLearn from "./pages/FinanceLearn";
 import FAQ from "./pages/FAQ";
 import BusinessDivision from "./pages/BusinessDivision";
+import Council from "./pages/Council";
 
 const baseUrl = import.meta.env.BASE_URL;
 const routerBase =
@@ -45,6 +46,7 @@ function AppRouter() {
         <Route path={"/roadmap"} component={Roadmap} />
         <Route path={"/faq"} component={FAQ} />
         <Route path={"/business-division"} component={BusinessDivision} />
+        <Route path={"/council"} component={Council} />
         <Route path={"/404"} component={NotFound} />
         {/* Final fallback route */}
         <Route component={NotFound} />
