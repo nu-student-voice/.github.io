@@ -117,8 +117,9 @@ export default function Council() {
           <p className="text-sm uppercase tracking-wide text-slate-500">日本大学 評議員会ガイド</p>
           <h1 className="text-4xl font-bold text-slate-900">評議員会の役割と最新動向を一望</h1>
           <p className="text-lg text-slate-600">
-            @NUhyogikai に保存された議事録（2022年〜2024年）と法改正の流れをもとに、
-            評議員会の存在意義・権限・最近の決定と、学生自治の視点で考えるべき問いをまとめました。
+            日本大学情報公開ページ「評議会」（https://www.nihon-u.ac.jp/disclosure/minutes/board_trustees/）に公開されている
+            議事録（2022年〜2024年）と法改正の流れをもとに、評議員会の存在意義・権限・最近の決定と、
+            学生自治の視点で考えるべき問いをまとめました。
           </p>
         </header>
 
@@ -187,8 +188,8 @@ export default function Council() {
             <h2 className="text-2xl font-bold text-slate-900">最近の議事録から追う重要決定</h2>
           </div>
           <p className="text-slate-600">
-            @NUhyogikai の議事録（要旨）をもとに、学生生活や自治に影響する論点を抜粋。最新の法改正対応から、
-            競技部不祥事、財務・施設投資まで、チェックすべき流れを整理しました。
+            日本大学情報公開ページで公開されている議事録（要旨）をもとに、学生生活や自治に影響する論点を抜粋。
+            最新の法改正対応から、競技部不祥事、財務・施設投資まで、チェックすべき流れを整理しました。
           </p>
 
           <div className="space-y-4">
